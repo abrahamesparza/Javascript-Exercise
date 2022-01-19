@@ -14,8 +14,6 @@ var evenOccurrence = function(arr) {
   // i want to take record of what values are in the array and how many times they appear
   // create an object to track values and occurences
   let records = {};
-  //define array to store even occurrence values
-  let evens = [];
   //assign each value as the key and their occurecnes as a value
   for (let key of arr) {
     records[key] = records[key] + 1 || 1;
