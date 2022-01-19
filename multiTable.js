@@ -8,26 +8,28 @@ multiTable(3)
 
 */
 
-function multiTable(n, row) {
+// this function will help me define each row for my table,
+function multiRow(n, rowNum) {
   //define an array table
-  let table = [];
-  //starting at 1 iterate to n
-  for (let i = 1; i <= n; i++) {
-    //push the values of each row into table
-    table.push(i * row)
-  }
-  return table;
-}
-
-function multiRow (n) {
-  //establish an array to keep track of each row
   let row = [];
   //starting at 1 iterate to n
   for (let i = 1; i <= n; i++) {
-    //push each call of multi table into row, to keep track of each sub array within my table
-    row.push(multiTable(n, i))
+    //push the values of each row into table
+    row.push(i * rowNum)
   }
   return row;
 }
 
-console.log(multiRow(5));
+// this function will call multiRow, and push each row array into my table array
+function multiTable (n) {
+  //establish an array to keep track of each row
+  let table = [];
+  //starting at 1 iterate to n
+  for (let i = 1; i <= n; i++) {
+    //push each call of multi table into row, to keep track of each sub array within my table
+    table.push(multiRow(n, i))
+  }
+  return table;
+}
+
+console.log(multiTable(5));
