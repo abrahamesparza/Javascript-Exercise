@@ -18,7 +18,6 @@ var commonCharacters = function(string1, string2) {
   let result = new Set();
   //split each string into an array
   string1 = string1.split('');
-  string2 = string2.split('');
   //iterate through string1 array
   for (let i = 0; i < string1.length; i++) {
     //check if string2 contains chars from string1
