@@ -13,10 +13,10 @@
 // this function will take two string arguments
 // and return a new string of characters that were
 // found in both strings in the order of string1
-var commonCharacters = function(string1, string2) {
+var commonCharacters = function (string1, string2) {
   //create a new set to store common characters
   let result = new Set();
-  //split each string into an array
+  //split string1 into an array
   string1 = string1.split('');
   //iterate through string1 array
   for (let i = 0; i < string1.length; i++) {
