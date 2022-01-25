@@ -69,7 +69,6 @@ console.log(asyncMap([
   }
 ],
   function(results){
-    // the results array will equal ['one','two'] even though
-    // the second function had a shorter timeout
+    // the results array should equal ['one','two']
     console.log(results)
 }));
